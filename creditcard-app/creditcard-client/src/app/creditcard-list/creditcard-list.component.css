@@ -1,0 +1,12 @@
+.label-text {
+    display: inline-block;
+    font-size: 70%;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    color: #212529;
+    background-color: #f8f9fa;    
+}

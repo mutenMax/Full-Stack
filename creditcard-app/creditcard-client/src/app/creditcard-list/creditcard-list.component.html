@@ -1,0 +1,22 @@
+<div class="creditcard-body">
+    <table class="table table-bordered table-striped table-hover table-sm">
+    <caption><small>List of Credit Cards</small></caption>
+    <thead>
+        <tr>
+        <th scope="col"><small>Name</small></th>
+        <th scope="col"><small>Card Number</small></th>
+        <th scope="col"><small>Card Balance</small></th>
+        <th scope="col"><small>Card Limit</small></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let creditCard of creditCards">
+        <td><small>{{ creditCard.name }}</small></td>
+        <td><small>{{ creditCard.creditCardNumber }}</small></td>
+        <td><small>£ {{ creditCard.cardBalance }}</small></td>
+        <td><small>£ {{ creditCard.cardLimit }}</small></td>
+    </tr>
+    </tbody>
+    </table>
+</div>
+      

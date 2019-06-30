@@ -1,0 +1,28 @@
+<div class="creditcard-body">
+    <h5 class="card-title">Add</h5>
+  <div *ngIf="errors" class="error-alert" role="alert">
+    <div *ngFor="let error of errors">
+      <small>
+      {{ error }}
+    </small>
+  </div>
+  </div>  
+  <form (ngSubmit)="onSubmit()" #creditCardForm="ngForm" style="width: 400px;" class="needs-validation" novalidate>
+    <div class="form-group ">
+      <label for="name" class="label-text">Name</label>
+      <input type="text" [(ngModel)]="creditCard.name" class="form-control form-control-sm" id="name" name="name" placeholder="Enter name"
+        required #name="ngModel">
+    </div>
+    <div class="form-group">
+      <label for="creditCardNumber" class="label-text">Credit Card Number</label>
+      <input type="text" [(ngModel)]="creditCard.creditCardNumber" class="form-control form-control-sm" id="creditCardNumber" name="creditCardNumber" placeholder="Enter CreditCard Number"
+        required #creditCardNumber="ngModel">
+    </div>
+    <div class="form-group">
+        <label for="cardLimit" class="label-text">Card Limit</label>
+        <input type="text" [(ngModel)]="creditCard.cardLimit" class="form-control form-control-sm" id="cardLimit" name="cardLimit" placeholder="Enter CreditCard Limit"
+          required #cardLimit="ngModel">
+      </div>
+    <button type="submit"  class="btn btn-secondary btn-sm">Add</button>
+  </form>
+</div>
