@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges, OnChanges } from '@angular/core';
 import { CreditCard } from '../model/creditcard';
 import { CreditCardService } from '../service/creditcard.service';
 
@@ -7,15 +7,20 @@ import { CreditCardService } from '../service/creditcard.service';
   templateUrl: './creditcard-list.component.html',
   styleUrls: ['./creditcard-list.component.css']
 })
-export class CreditCardListComponent implements OnInit {
+export class CreditCardListComponent implements OnChanges {
 
   creditCards: CreditCard[];
+  @Input() doReload;
 
   constructor(private creditCardService: CreditCardService) {
 
   }
 
-  ngOnInit() {
+  ngOnChanges(changes: SimpleChanges) {
+    this.getCreditCardList();
+  } 
+
+  getCreditCardList() {
     this.creditCardService.findAll().subscribe(data => {
       this.creditCards = data;
     });

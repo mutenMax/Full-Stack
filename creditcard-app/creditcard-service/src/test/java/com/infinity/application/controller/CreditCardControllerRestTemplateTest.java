@@ -8,21 +8,21 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.infinity.application.entities.CreditCard;
 import com.infinity.application.repositories.CreditCardRepository;
 import org.json.JSONException;
-        import org.junit.Test;
-        import org.junit.runner.RunWith;
-        import org.skyscreamer.jsonassert.JSONAssert;
-        import org.springframework.beans.factory.annotation.Autowired;
-        import org.springframework.boot.test.context.SpringBootTest;
-        import org.springframework.boot.test.mock.mockito.MockBean;
-        import org.springframework.boot.test.web.client.TestRestTemplate;
-        import org.springframework.http.*;
-        import org.springframework.test.context.ActiveProfiles;
-        import org.springframework.test.context.junit4.SpringRunner;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.skyscreamer.jsonassert.JSONAssert;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.http.*;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.junit4.SpringRunner;
 
-        import static org.junit.Assert.assertEquals;
-        import static org.mockito.ArgumentMatchers.any;
-        import static org.mockito.Mockito.times;
-        import static org.mockito.Mockito.verify;
+import static org.junit.Assert.assertEquals;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT) // for restTemplate
