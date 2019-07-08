@@ -20,6 +20,7 @@ public class Application {
 
 
 	@Bean
+	@Profile("!test")
 	CommandLineRunner init(CreditCardRepository creditCardRepository) {
 		return args -> {
 			Stream.of("Alice", "Bob").forEach(Name -> {
